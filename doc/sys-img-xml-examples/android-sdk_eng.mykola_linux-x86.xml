@@ -1,0 +1,49 @@
+<sys-img:sdk-sys-img xmlns:sys-img="http://schemas.android.com/sdk/android/repo/sys-img2/01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <license id="sdk-license" type="text">Some license text</license>
+
+	<channel id="channel-0">stable</channel>
+	<channel id="channel-1">beta</channel>
+	<channel id="channel-2">dev</channel>
+	<channel id="channel-3">canary</channel>
+
+	<remotePackage path="system-images;android-32;nkh-lab;x86">
+		<type-details xsi:type="sys-img:sysImgDetailsType">
+			<api-level>32</api-level>
+			<tag>
+				<id>android-automotive</id>
+				<display>ncar emulator</display>
+			</tag>
+			<vendor>
+				<id>nkh-lab</id>
+				<display>ncar emulator</display>
+			</vendor>
+			<abi>x86</abi>
+		</type-details>
+		<revision>
+			<major>1</major>
+			<minor>0</minor>
+		</revision>
+		<display-name>ncar emulator</display-name>
+        <uses-license ref="sdk-license"/>
+		<dependencies>
+			<dependency path="emulator">
+				<min-revision>
+					<major>29</major>
+					<minor>0</minor>
+					<micro>0</micro>
+				</min-revision>
+			</dependency>
+		</dependencies>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<complete>
+					<size>1077168023</size>
+					<checksum>316ac6a5261f148e9284f375c36fa66cde620796</checksum>
+					<url>android-sdk_eng.user1_linux-x86.zip</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+
+</sys-img:sdk-sys-img>

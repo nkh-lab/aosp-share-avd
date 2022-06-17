@@ -1,0 +1,49 @@
+<sys-img:sdk-sys-img xmlns:sys-img="http://schemas.android.com/sdk/android/repo/sys-img2/01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <license id="sdk-license" type="text">{{LICENSE}}</license>
+
+	<channel id="channel-0">stable</channel>
+	<channel id="channel-1">beta</channel>
+	<channel id="channel-2">dev</channel>
+	<channel id="channel-3">canary</channel>
+
+	<remotePackage path="system-images;android-{{PLATFORM_SDK_VERSION}};{{PRODUCT_MANUFACTURER}};{{TARGET_ARCH}}">
+		<type-details xsi:type="sys-img:sysImgDetailsType">
+			<api-level>{{PLATFORM_SDK_VERSION}}</api-level>
+			<tag>
+				<id>{{TAG_ID}}</id>
+				<display>{{PRODUCT_MODEL}}</display>
+			</tag>
+			<vendor>
+				<id>{{PRODUCT_MANUFACTURER}}</id>
+				<display>{{PRODUCT_MODEL}}</display>
+			</vendor>
+			<abi>{{TARGET_ARCH}}</abi>
+		</type-details>
+		<revision>
+			<major>{{PACKAGE_REVISION_MAJOR}}</major>
+			<minor>{{PACKAGE_REVISION_MINOR}}</minor>
+		</revision>
+		<display-name>{{PRODUCT_MODEL}}</display-name>
+        <uses-license ref="sdk-license"/>
+		<dependencies>
+			<dependency path="emulator">
+				<min-revision>
+					<major>29</major>
+					<minor>0</minor>
+					<micro>0</micro>
+				</min-revision>
+			</dependency>
+		</dependencies>
+		<channelRef ref="channel-0"/>
+		<archives>
+			<archive>
+				<complete>
+					<size>{{SDK_ARCHIVE_SIZE}}</size>
+					<checksum>{{SDK_ARCHIVE_CHECKSUM}}</checksum>
+					<url>{{SDK_ARCHIVE_FILENAME}}</url>
+				</complete>
+			</archive>
+		</archives>
+	</remotePackage>
+
+</sys-img:sdk-sys-img>
